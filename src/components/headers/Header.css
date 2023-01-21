@@ -1,0 +1,113 @@
+.headersSearchBox{
+    display: flex;
+    width: 30%;
+    margin: auto;
+}
+.header{
+    position: sticky;
+    top: 0px;
+}
+.searchListBox{
+    position: fixed;
+  
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.452);
+   
+}
+.searchList{
+    cursor:pointer;
+    height:fit-content;
+    width: 40%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border-bottom: rgba(0, 0, 0, 0.082) solid 1px;
+   padding: 10px;
+}
+.brandName{
+    padding: 18px;
+    display: flex;
+font-family:'Roboto Slab' ;
+font-weight: 500;
+font-size: x-large;
+color: rgb(255, 255, 255);
+}
+#navBar{
+    background-color: #8f2917;
+    padding: 8px;
+    padding-bottom: 16px;
+}
+#searchButton{
+    background-color: rgb(223, 150, 62);
+    color: black;
+}
+#searchButton:hover{
+    background-color: rgb(184, 98, 29);
+    color: rgb(255, 255, 255);
+}
+.username{
+    color: #df944f;
+    font-size: larger;
+    font-weight: 500;
+    cursor: pointer;
+}
+.usernameBox{
+    padding-bottom: 12px;
+}
+.username:hover{
+    color: aliceblue;
+}
+
+.logoutButton{
+background-color: rgb(221, 151, 59);
+border: none;
+border-radius: 4px;
+margin-bottom: 30px;
+}
+.logoutButton:hover{
+    background-color: rgb(194, 103, 17);
+    color: aliceblue;
+}
+@media(max-width:800px){
+    #headersSearchBoxInput{
+        width: 50vw;
+        margin: auto;
+    }
+}
+@media(max-width:480px){
+    #headersSearchBoxInput{
+        width: 40vw;
+        margin: auto;
+    }
+    .brandName{
+        font-size: large;
+    }
+    .searchList{
+        width: 80%;
+    }
+}
+
+@media(max-width:380px){
+    .headersSearchBox{
+        justify-content: center;
+    }
+   
+    #searchButton{
+        width: 50px;
+        font-size: 10px;
+        height: 24px;
+    }
+    #headersSearchBoxInput{
+        width: 50vw;
+        height: 24px;
+    }
+}
+@media(max-width:320px){
+    .logoutButton{
+     width: 60px;
+     font-size: 14px;
+     
+    }
+   
+  }

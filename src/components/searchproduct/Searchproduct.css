@@ -1,0 +1,62 @@
+.productList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
+.productImage{
+    width: 25vw;
+
+}
+
+
+
+.productSearched{
+    box-shadow: rgba(0, 0, 0, 0.144) 1px 1px 2px 2px;
+    padding-bottom: 12px;
+    border-radius: 6px;
+    padding-top: 12px;
+}
+#backButton{
+    margin-right: 95%;
+    margin-top: 12px;
+    position: fixed;
+    top:70px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.searchedLogout{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+@media(max-width:800px){
+    #backButton{
+        margin-right: 85%;
+    }
+ }
+@media(max-width:480px){
+    .productSearched{
+     width: 90vw;
+    }
+    .productImage{
+     width: 50vw;
+ }
+ }
+ @media(max-width:320px){
+
+    .searchedLogout{
+     background-color: #8f2917;
+     position: sticky;
+     top:126px;
+     justify-content: space-between;
+    }
+    #backButton{
+        position: static;
+        margin-right: 0%;
+        margin-left: 12px;
+        margin-bottom: 12px;
+    }
+  }

@@ -1,0 +1,55 @@
+.login{
+height: 57.5vh;
+}
+.loginBox{
+    width: 30Vw;
+    margin: auto;
+    height: 50vh;
+    box-shadow: rgba(0, 0, 0, 0.158) 1px 1px 2px 2px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-radius: 4px;
+}
+.inputForLogin{
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 80%;
+    
+}
+.inputForLogin:hover{
+    border: rgb(204, 160, 79) solid 2px;
+}
+.loginButton{
+    background-color: rgb(230, 155, 44);
+    border: 0px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    width: 70px;
+    height: 40px;
+}
+.loginButton:hover{
+    background-color: rgb(153, 95, 20);
+    color: aliceblue;
+}
+.register{
+    cursor:pointer;
+   font-weight: 500;
+}
+.register:hover{
+    color: rgb(79, 81, 177);
+}
+@media(max-width:900px){
+.loginBox{
+width: 40vw;
+}
+}
+@media(max-width:620px){
+    .loginBox{
+    width: 50vw;
+    }
+    }
+    @media(max-width:480px){
+        .loginBox{
+        width: 90vw;
+        }
+        }

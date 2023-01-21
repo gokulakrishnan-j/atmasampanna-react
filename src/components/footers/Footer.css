@@ -1,0 +1,27 @@
+.footerSVG{
+    display: flex;
+   justify-content: center;
+   gap: 20px;
+}
+.footer{
+    margin-top: 12px;
+    background-color: rgb(201, 147, 77);
+    height:110px;
+    color: rgb(141, 34, 34);
+    padding-top: 12px;
+}
+.svg{
+   
+    width: 20px;
+}
+@media(max-width:380px){
+    .footer{
+        font-size: 12px;
+    }
+ }
+
+ @media(max-width:280px){
+    .footer{
+        font-size: 9px;
+    }
+ }
