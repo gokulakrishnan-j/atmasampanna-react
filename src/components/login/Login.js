@@ -34,6 +34,7 @@ function Login() {
 
            fetch(`${API}/user/login`,{
             method:"POST",
+               mode: 'no-cors',
             body:JSON.stringify(values),
             headers:{'Content-Type':'application/json'}
            })
