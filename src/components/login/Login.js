@@ -32,6 +32,7 @@ function Login() {
 
         onSubmit:(values)=>{
 
+            console.log(values)
            fetch(`${API}/user/login`,{
             method:"POST",
             body:JSON.stringify(values),
