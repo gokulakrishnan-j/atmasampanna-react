@@ -41,7 +41,7 @@ var total = 0;
             <img src={n.detail.image} className="cartImage" alt={n.name} />
             <div>
                 <h6>Quantity</h6>
-                <p>{n.quantity}</p>
+                <p>{n.quantity ? n.quantity :null}</p>
                 <h5>Price ₹</h5>
             <p>{n.detail.price}</p>
             </div>
