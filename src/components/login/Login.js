@@ -21,6 +21,7 @@ const validationSchema = yup.object({
 function Login() {
     const navigate = useNavigate()
 
+
     //using formik for validation
     const {handleSubmit,handleChange,handleBlur,touched,values,errors} = useFormik({
         initialValues:{
@@ -31,11 +32,13 @@ function Login() {
         validationSchema:validationSchema,
 
         onSubmit:(values)=>{
+            
 
            fetch(`${API}/user/login`,{
             method:"POST",
             body:JSON.stringify(values),
-            headers:{'Content-Type':'application/json'}
+            headers:{'Content-Type':'application/json'},
+            mode:"cors"
            })
            //if login sucessfully navigating to product component or if login is unsucessfull alert box will be pop
            .then((login)=>login.ok ? navigate(`/products/${values.email}`) : alert("wrong username or password"))

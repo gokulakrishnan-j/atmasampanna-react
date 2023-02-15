@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { API } from '../../global/connect'
 import './Header.css'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
-function Header({searchedProducts,userDetails}) {
+function Header({searchedProducts,userDetails,cart,cartValues}) {
   const navigate = useNavigate()
 
   //searching products
@@ -14,12 +15,27 @@ const [getSearchedProducts,setGetSearchedProducts] =useState([])
 // dropdown for product list 
 const [searchList,setSearchList] =useState([])
 // toggle button for dropdown logout button
-const[toggle,setToggle]=useState(false)
+const [toggle,setToggle]=useState(false)
+
+const [cartValue,setCartValue] = useState()
+
+useEffect(()=>{
+setCartValue(cartValues)
+},[cartValues])
+
+
+useEffect(()=>{
+ 
+if(cart.length !== 0){
+const add = cart.reduce((acc,curr)=>acc + curr)
+setCartValue(add)
+}
+},[cart])
 
 // sending product details to searchproduct component
 useEffect(()=>{
   searchedProducts(getSearchedProducts)
-},[getSearchedProducts])
+},[getSearchedProducts,searchedProducts])
 
 
 // searching a products
@@ -33,7 +49,7 @@ useEffect(()=>{
     .then((value)=>setGetSearchedProducts(value))
 
     // navigating to searchproduct component
-navigate(`search-products/${value}`)
+navigate(`search-products/${userDetails.email}/${value}`)
 // making input field empty afert search
 setSerchProduct('')
     }
@@ -83,7 +99,9 @@ setSerchProduct('')
     {/*search button*/}
     <button id='searchButton' className="btn btn-outline-success my-2 my-sm-0" onClick={()=>handleSearch(searchProduct)}>Search</button>
     </div>
-   
+   <div className='cart'>
+    <ShoppingBasketIcon onClick={()=>navigate(`/cart/${userDetails.email}`)}/> {cartValue ? cartValue :0}
+   </div>
 </nav>
 <div>{
       searchProduct && localStorage.getItem("token") ?

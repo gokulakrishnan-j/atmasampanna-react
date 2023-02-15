@@ -1,1 +1,1 @@
-export const API = "https://atmasampanna.onrender.com"
+export const API = "http://localhost:4000"

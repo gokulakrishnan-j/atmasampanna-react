@@ -1,0 +1,19 @@
+.backButton{
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(218, 120, 41);
+}
+
+.backButton:hover{
+    background-color: brown;
+    color: aliceblue;
+}
+.addButton{
+    margin-bottom: 12px;
+}
+
+@media(max-width:480px){
+    .backButton{
+        margin-top: 12px;
+    }
+}

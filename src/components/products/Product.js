@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { API } from '../../global/connect'
 import './Product.css'
 
 function Product({userDetails}) {
   
+ 
+
   //geting email from url using useParams
   const {email} = useParams()
 
   const [token,settoken] = useState(null)
+  
 
   useEffect(()=>{
      /* geting individual token */
@@ -28,6 +31,7 @@ return token ? <ProductList tokenData={token} userDetails={userDetails} /> : nul
 
 function ProductList({tokenData , userDetails}){
 
+  const navigate = useNavigate()
   const {email} = useParams()
 
 const [products,setProducts] = useState([])
@@ -66,11 +70,11 @@ localStorage.setItem("token",tokenData.my_token)
     {/* listing products */}
       <div className='productList'>
       {products.map((product,index)=>(
-        <div className='products' key={index}>
+        <div className='products' key={index} onClick={()=>navigate(`/detail/${email}/${product._id}`)}>
           <img src={product.image} className='productImage' alt={product.name}/>
           <div className='productName'><h6>{product.name}</h6>
           <p>₹{product.price}</p>
-          <button type="button" className="btn btn-secondary">Add to cart</button>
+          
           </div>
         </div>
       ))}

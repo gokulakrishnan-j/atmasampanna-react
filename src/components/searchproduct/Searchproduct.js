@@ -1,11 +1,12 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import './Searchproduct.css'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 
 //geting searched products
 function Searchproduct({searchedProducts}) {
+  const {email} = useParams()
     const navigate = useNavigate()
   
   return (
@@ -20,11 +21,11 @@ function Searchproduct({searchedProducts}) {
         {
           // showing searched product list
         searchedProducts.map((product,index)=>(
-          <div key={index} className="productSearched">
+          <div key={index} className="productSearched" onClick={()=>navigate(`/detail/${email}/${product._id}`)}>
             <div ><img src={product.image} className='productImage' alt={product.name}/></div>
             <div className='productName'><h6>{product.name}</h6>
             <p>₹{product.price}</p>
-          <button type="button" className="btn btn-secondary">Add to cart</button>
+         
             </div>
           </div>
         ))}

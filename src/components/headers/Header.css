@@ -69,6 +69,13 @@ margin-bottom: 30px;
     background-color: rgb(194, 103, 17);
     color: aliceblue;
 }
+.cart{
+    display: flex;
+    justify-content: end;
+    color: white;
+    padding: 12px;
+    margin-right: 20px;
+}
 @media(max-width:800px){
     #headersSearchBoxInput{
         width: 50vw;
