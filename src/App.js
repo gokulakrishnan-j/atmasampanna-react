@@ -62,7 +62,7 @@ function App() {
         details[i].quantity = addingCart[i]
       }
       setDetails(details)
-    },[product,addingCart])
+    },[product])
     
 
   return (
