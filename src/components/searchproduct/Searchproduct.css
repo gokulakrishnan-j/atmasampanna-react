@@ -15,6 +15,7 @@
     padding-bottom: 12px;
     border-radius: 6px;
     padding-top: 12px;
+    cursor: pointer;
 }
 #backButton{
     margin-right: 95%;

@@ -99,9 +99,10 @@ setSerchProduct('')
     {/*search button*/}
     <button id='searchButton' className="btn btn-outline-success my-2 my-sm-0" onClick={()=>handleSearch(searchProduct)}>Search</button>
     </div>
+    {localStorage.getItem("token")?
    <div className='cart'>
     <ShoppingBasketIcon onClick={()=>navigate(`/cart/${userDetails.email}`)}/> {cartValue ? cartValue :0}
-   </div>
+   </div>:null}
 </nav>
 <div>{
       searchProduct && localStorage.getItem("token") ?

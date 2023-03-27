@@ -57,12 +57,15 @@ function App() {
   
       }
 
+    
+
       for(let i = 0;i<addingCart.length;i++){
 
         details[i].quantity = addingCart[i]
       }
+      
       setDetails(details)
-    },[product,addingCart])
+    },[product])
     
 
   return (

@@ -23,11 +23,13 @@ function DetailsOfProduct({cart,cartId}) {
 
     const handleAddToCart = ()=>{
 
-  
+  if(addToCart !== 0){
         cart((add)=>[...add,addToCart])
         cartId(id)
         navigate(-1)
-
+  }else{
+    alert("Choose the quantity")
+  }
     }
 
   return (
@@ -42,7 +44,7 @@ function DetailsOfProduct({cart,cartId}) {
           <div className='addButton'>
           <button type="button" className="btn btn-secondary" onClick={()=>setAddToCart(addToCart + 1)}>+</button>
           <span style={{padding:"8px"}}>{addToCart}</span>
-          <button type="button" className="btn btn-secondary" onClick={()=>setAddToCart(addToCart - 1)}>-</button>
+          <button type="button" className="btn btn-secondary" onClick={()=>setAddToCart(addToCart > 0?addToCart - 1:0)}>-</button>
           </div>
           <button type="button" className="btn btn-secondary" onClick={()=>handleAddToCart()}>Add to cart</button>
     

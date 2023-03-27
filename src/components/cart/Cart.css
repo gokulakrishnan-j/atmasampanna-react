@@ -26,9 +26,7 @@ padding: 20px;
     padding: 8px;
     background-color: rgba(0, 0, 0, 0.459);
     color: aliceblue;
-    position:fixed;
-    top: 250px;
-    right: 100px;
+   
 }
 .cartBox{
     display: flex;
@@ -40,6 +38,18 @@ height: 100px;
 margin-bottom: 50px;
 margin-top: 25px;
 border-radius: 12px;
+}
+.placeOrder{
+    background-color: rgb(8, 197, 17);
+    width: fit-content;
+    padding: 8px;
+    margin: auto;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.placeOrder:hover{
+    color: white;
 }
 
 @media(max-width:790px){
