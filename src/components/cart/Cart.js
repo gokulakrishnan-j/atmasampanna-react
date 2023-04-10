@@ -114,7 +114,7 @@ useEffect(()=>{
         name={"Place Order"}
         currency={"INR"}
         amount={totalPrice.length >0 ?totalPrice.reduce((acc,curr)=>acc+curr) * 100:0}
-        description={`Total Amount ₹ ${totalPrice.length >0 ?totalPrice.reduce((acc,curr)=>acc+curr) * 100:0}`}
+        description={`Total Amount ₹ ${totalPrice.length >0 ?totalPrice.reduce((acc,curr)=>acc+curr):0}`}
         billingAddress
         shippingAddress
         image='https://img.freepik.com/free-vector/seasonal-sale-discounts-presents-purchase-visiting-boutiques-luxury-shopping-price-reduction-promotional-coupons-special-holiday-offers-vector-isolated-concept-metaphor-illustration_335657-2766.jpg?w=2000'
