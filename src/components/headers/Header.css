@@ -75,6 +75,7 @@ margin-bottom: 30px;
     color: white;
     padding: 12px;
     margin-right: 20px;
+    cursor: pointer;
 }
 @media(max-width:800px){
     #headersSearchBoxInput{
